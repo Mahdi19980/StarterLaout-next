@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html {
+  transition: background-color 0.5s ease-in-out; 
+ } */
+
+[data-theme="night"]{
+
+ 
+
+  .daisy {
+    color: 	#3ABFF8 !important;
+    font-size: 36px;
+   }
+
+   .ui{
+    color: 	#C8CAD0 !important;
+    font-size: 36px;
+   }
+}
+
