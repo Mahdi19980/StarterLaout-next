@@ -1,9 +1,9 @@
-import "./globals.css";
 import Providers from "./components/Themeprovider";
 import Themechanger from "./components/Themechanger";
 import Navbar from "./components/navbar";
 import SideBar from "./components/drawer";
-import { Metadata } from "next";
+// import { Metadata } from "next";
+import "./globals.css";
 
 export const metadata = {
   title: "Create Night Mode",
