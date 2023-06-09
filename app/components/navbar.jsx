@@ -12,26 +12,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex-none">
-          {/* <ThemeChanger /> */}
 
-          {/* <ul className="menu menu-horizontal px-1 font-bold align-middle">
-            <li>
-            </li>
-            <li> */}
-          {/* <details>
-                <summary>Parent</summary>
-
-                <ul className="p-2 bg-base-100 font-bold">
-                  <li>
-                    <a>Link 1</a>
-                  </li>
-                  <li>
-                    <a>Link 2</a>
-                  </li>
-                </ul>
-              </details> */}
-          {/* </li>
-          </ul> */}
         </div>
       </div>
     </>
