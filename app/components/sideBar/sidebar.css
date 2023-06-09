@@ -1,0 +1,16 @@
+/* sidebar */
+
+@media (min-width: 1024px) {
+
+    .main {
+    
+        width: 95vw !important;
+        
+        }
+        
+        .sidebar { 
+        width: 5vw !important;
+        
+        }
+    
+}
