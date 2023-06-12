@@ -36,7 +36,8 @@ const SideBar = ({ checked, setCheck }) => {
               {/* this hidden checkbox controls the state */}
               <input
                 checked={checked}
-                onChange={(e) => handleChange(e)}
+                onChange={(e) => handleChange(e)} 
+                
                 type="checkbox"
               />
 
