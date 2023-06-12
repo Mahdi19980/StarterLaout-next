@@ -2,8 +2,11 @@
 import { usePathname } from "next/navigation";
 import Navbar from "./components/navbar";
 import SideBar from "./components/drawer";
+import { useState } from "react";
 
 const LayoutProvider = ({ children }) => {
+  const [toggle, setToggle] = useState(true);
+
   const pathname = usePathname();
 
   if (pathname === "/about") {
@@ -13,14 +16,20 @@ const LayoutProvider = ({ children }) => {
   return (
     <>
       <div className="flex">
-        <div className="main">
+        <div className={toggle ? "main inactive" : "main active"}>
           <div>
             <Navbar />
           </div>
           <div>{children}</div>
         </div>
-        <div className="sidebar md:hidden  lg:flex ">
-          <SideBar />
+        <div
+          className={
+            toggle
+              ? "md:hidden  lg:flex sidebar active transition duration-500 ease-in-out"
+              : "md:hidden  lg:flex sidebar inactive transition duration-500 ease-in-out"
+          }
+        >
+          <SideBar checked={toggle} setCheck={setToggle} />
         </div>
       </div>
     </>

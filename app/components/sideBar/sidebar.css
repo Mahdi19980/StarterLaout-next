@@ -3,14 +3,31 @@
 @media (min-width: 1024px) {
 
     .main {
-    
+
         width: 95vw !important;
-        
-        }
-        
-        /* .sidebar { 
-        width: 5vw !important;
-        
-        } */
-    
-} 
+        transition: 0.5s;
+    }
+
+    .sidebar {
+
+        transition: 0.5s all;
+    }
+
+    .sidebar.inactive {
+        /* margin-left: 2px ; */
+
+        width: 6vw !important;
+
+
+    }
+
+    .sidebar.active {
+        /* margin-left: 240px ; */
+
+        width: 20vw !important;
+        transition: 0.5s all;
+
+
+    }
+
+}
