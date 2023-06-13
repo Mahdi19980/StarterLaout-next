@@ -21,12 +21,12 @@ const SideBar = ({ checked, setCheck }) => {
   return (
     <ul
       dir="rtl"
-      className="  menu menu-lg p-4 pl-1 h-full bg-base-200 text-base-content  transition duration-500 ease-in-out"
+      className="  menu menu-lg p-4 pl-1 h-full plas shadow-md text-base-content  transition duration-500 ease-in-out"
     >
       {/* Sidebar content here */}
 
-      <li className=" menu-title items-end text-justify mb-8 shadow-md">
-        <div className="flex  ">
+      <li className=" menu-title items-end text-justify mb-8   cursor-context-menu">
+        <div className={!toggle ? "flex w-12 ml-2" : "flex "}>
           <div className={!toggle ? "hidden" : "flex"}>
             <p className="ui font-bold">UI</p>
             <p className="daisy font-bold">daisy</p>
@@ -69,11 +69,11 @@ const SideBar = ({ checked, setCheck }) => {
 
       {Sidebar.map((bar, index) => {
         return (
-          <li className={!toggle && "items-end"} key={index}>
-            <a className=" text-start w-15">
+          <li className={!toggle && "items-end pl-2"} key={index}>
+            <a className=" text-start px-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={toggle ? "h-6 w-6" : "h-8 w-8"}
+                className={toggle ? "h-6 w-6" : "h-5 w-5"}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
