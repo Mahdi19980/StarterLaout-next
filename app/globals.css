@@ -8,9 +8,7 @@
 
 [data-theme="night"]{
 
- 
-
-  .daisy {
+  .daisy{
     color: 	#3ABFF8 !important;
     font-size: 36px;
    }
@@ -19,9 +17,28 @@
     color: 	#C8CAD0 !important;
     font-size: 36px;
    }
-}
+ }
 
+[data-theme="light"]{
 
+ 
+
+  .daisy {
+    color: 	#66CC8A !important;
+    font-size: 36px;
+   }
+
+   .ui{
+    color: 	#333C4D !important;
+    font-size: 36px;
+   }
+  }
+
+  .plas{
+    -webkit-box-shadow: -14px 1px 30px -20px rgba(0,0,0,0.54);
+    -moz-box-shadow: -14px 1px 30px -20px rgba(0,0,0,0.54);
+    box-shadow: -14px 1px 30px -20px rgba(0,0,0,0.54)
+  }
 
 
 
