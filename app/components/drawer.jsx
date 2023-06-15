@@ -8,7 +8,6 @@ import Drop from "./dropDownSide";
 const SideBar = ({ checked, setCheck }) => {
   const [toggle, setToggle] = useState(checked);
 
-  const [activeItem, setActiveItem] = useState(false);
 
   const handleClick = (item) => {
     setActiveItem(!activeItem);
@@ -75,25 +74,7 @@ const SideBar = ({ checked, setCheck }) => {
       </li>
 
       {Sidebar.map((bar, index) => {
-        return (
-          <li
-          
-            onClick={handleClick}
-            className={!toggle && "items-end pl-2"}
-            key={bar.id}
-          >
-            <a className=" text-start text-base  li-item px-3 font-medium">
-              {bar.icon}
-              <p className={!toggle ? "hidden" : "flex"}>{bar.name}</p>
-            </a>
-
-            {bar.children && (
-              <ul className="list-inside transition duration-500 ease-in-out">
-                <Drop bar={bar.children} />
-              </ul>
-            )}
-          </li>
-        );
+        return <Drop bar={bar} toggle={toggle} />;
       })}
     </ul>
   );
