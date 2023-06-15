@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Sidebar from "./sideBar/sideBar";
 import React from "react";
+import Drop from "./dropDownSide";
 
 const SideBar = ({ checked, setCheck }) => {
   const [toggle, setToggle] = useState(checked);
@@ -87,23 +88,7 @@ const SideBar = ({ checked, setCheck }) => {
 
             {bar.children && (
               <ul className="list-inside transition duration-500 ease-in-out">
-                {bar.children.map((item, index) => {
-                  if (activeItem === true) {
-                    return (
-                      <li key={item.id} className="" style={{ top: "10px" }}>
-                        <a
-                          className="font-medium text-start m-1 text-base"
-                          href=""
-                        >
-                          {item.icon}
-                          <p>{item.name}</p>
-                        </a>
-                      </li>
-                    );
-                  } else {
-                    return null;
-                  }
-                })}
+                <Drop bar={bar.children} />
               </ul>
             )}
           </li>
