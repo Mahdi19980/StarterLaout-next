@@ -77,6 +77,7 @@ const SideBar = ({ checked, setCheck }) => {
       {Sidebar.map((bar, index) => {
         return (
           <li
+          
             onClick={handleClick}
             className={!toggle && "items-end pl-2"}
             key={bar.id}
