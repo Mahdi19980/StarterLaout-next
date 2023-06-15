@@ -2,9 +2,16 @@
 
 import { useState } from "react";
 import Sidebar from "./sideBar/sideBar";
+import React from "react";
 
 const SideBar = ({ checked, setCheck }) => {
   const [toggle, setToggle] = useState(checked);
+
+  const [activeItem, setActiveItem] = useState(false);
+
+  const handleClick = (item) => {
+    setActiveItem(!activeItem);
+  };
 
   const handleChange = (e) => {
     setCheck(!checked);
@@ -36,8 +43,7 @@ const SideBar = ({ checked, setCheck }) => {
               {/* this hidden checkbox controls the state */}
               <input
                 checked={checked}
-                onChange={(e) => handleChange(e)} 
-                
+                onChange={(e) => handleChange(e)}
                 type="checkbox"
               />
 
@@ -69,24 +75,37 @@ const SideBar = ({ checked, setCheck }) => {
 
       {Sidebar.map((bar, index) => {
         return (
-          <li className={!toggle && "items-end pl-2"} key={index}>
-            <a className=" text-start px-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={toggle ? "h-6 w-6" : "h-5 w-5"}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
+          <li
+            onClick={handleClick}
+            className={!toggle && "items-end pl-2"}
+            key={bar.id}
+          >
+            <a className=" text-start text-base  li-item px-3 font-medium">
+              {bar.icon}
               <p className={!toggle ? "hidden" : "flex"}>{bar.name}</p>
             </a>
+
+            {bar.children && (
+              <ul className="list-inside transition duration-500 ease-in-out">
+                {bar.children.map((item, index) => {
+                  if (activeItem === true) {
+                    return (
+                      <li key={item.id} className="" style={{ top: "10px" }}>
+                        <a
+                          className="font-medium text-start m-1 text-base"
+                          href=""
+                        >
+                          {item.icon}
+                          <p>{item.name}</p>
+                        </a>
+                      </li>
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
+              </ul>
+            )}
           </li>
         );
       })}

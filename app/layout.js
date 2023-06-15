@@ -6,6 +6,11 @@ import SideBar from "./components/drawer";
 // import { Metadata } from "next";
 import "./globals.css";
 import "./components/sideBar/sideBar.css";
+
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
 import LayoutProvider from "./layoutPage";
 
 export const metadata = {
