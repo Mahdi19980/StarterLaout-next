@@ -8,7 +8,6 @@ import Drop from "./dropDownSide";
 const SideBar = ({ checked, setCheck }) => {
   const [toggle, setToggle] = useState(checked);
 
-
   const handleClick = (item) => {
     setActiveItem(!activeItem);
   };
