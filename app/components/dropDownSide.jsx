@@ -20,6 +20,8 @@ const Drop = ({ bar, toggle }) => {
         <p className={!toggle ? "hidden" : "flex"}>{bar.name}</p>
       </a>
 
+      
+
       {bar.children && (
         <ul className={toggle ? "   list-inside" : "hidden"}>
           {bar.children.map((item, index) => {
