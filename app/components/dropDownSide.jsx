@@ -12,7 +12,7 @@ const Drop = ({ bar, toggle }) => {
   return (
     <li
       onClick={handleClick}
-      className={!toggle && "items-end pl-2"}
+      className={!toggle && "items-end pl-2 relative "}
       key={bar.id}
     >
       <a className=" text-start text-base  li-item px-3 font-medium">
@@ -20,10 +20,8 @@ const Drop = ({ bar, toggle }) => {
         <p className={!toggle ? "hidden" : "flex"}>{bar.name}</p>
       </a>
 
-      
-
       {bar.children && (
-        <ul className={toggle ? "   list-inside" : "hidden"}>
+        <ul className={toggle ? "   list-inside" : "absolute right-28 left-0"}>
           {bar.children.map((item, index) => {
             if (activeItem === true) {
               return (

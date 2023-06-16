@@ -73,7 +73,7 @@ const SideBar = ({ checked, setCheck }) => {
       </li>
 
       {Sidebar.map((bar, index) => {
-        return <Drop bar={bar} toggle={toggle} />;
+        return <Drop key={bar.id} bar={bar} toggle={toggle} />;
       })}
     </ul>
   );
