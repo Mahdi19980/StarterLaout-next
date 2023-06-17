@@ -17,6 +17,13 @@ const Sidebar = [
     id: 2,
     name: "Vue.js",
     icon: <FaVuejs size={"1.5rem"} />,
+    children: [
+      {
+        name: "ali",
+        icon: <CiBullhorn size={"1.5rem"} />,
+      },
+      { name: "hosein", icon: <CiDatabase size={"1.5rem"} /> },
+    ],
   },
 ];
 
