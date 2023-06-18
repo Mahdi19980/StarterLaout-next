@@ -7,10 +7,11 @@ const Sidebar = [
     icon: <FaVuejs size={"1.5rem"} />,
     children: [
       {
+        id: 1,
         name: "ali",
         icon: <CiBullhorn size={"1.5rem"} />,
       },
-      { name: "hosein", icon: <CiDatabase size={"1.5rem"} /> },
+      { id: 2, name: "hosein", icon: <CiDatabase size={"1.5rem"} /> },
     ],
   },
   {
@@ -19,10 +20,11 @@ const Sidebar = [
     icon: <FaVuejs size={"1.5rem"} />,
     children: [
       {
+        id: 1,
         name: "ali",
         icon: <CiBullhorn size={"1.5rem"} />,
       },
-      { name: "hosein", icon: <CiDatabase size={"1.5rem"} /> },
+      { id: 2, name: "hosein", icon: <CiDatabase size={"1.5rem"} /> },
     ],
   },
 ];
