@@ -33,7 +33,7 @@ const Drop = ({ bar, toggle }) => {
         {bar.icon}
         <p className={!toggle ? "hidden" : "flex"}>{bar.name}</p>
       </a>
-    
+  
       {bar.children && (
         <ul
           tabIndex={0}
