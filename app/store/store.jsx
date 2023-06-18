@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
 export const useToggleDropDown = create((set) => ({
-  toggle: false,
+  toggles: false,
   toggleDropDown: () => set((state) => ({ toggle: !state.toggle })),
 }));

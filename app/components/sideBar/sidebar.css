@@ -32,6 +32,6 @@
 
     .bg-drop {
         /* background-color: bisque !important; */
-        box-shadow: -6px 0px 17px 1px rgba(0,0,0,0.28);
+        box-shadow: -6px 0px 17px 1px rgba(0,0,0,0.28) !important;
     }
 }
