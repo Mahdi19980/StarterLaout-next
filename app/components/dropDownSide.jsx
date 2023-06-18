@@ -11,16 +11,22 @@ const Drop = ({ bar, toggle }) => {
   };
 
   useEffect(() => {
-    const closeDropdowns = (event) => {
-      if (!event.target.closest("#DropDown")) {
-        setActiveItem(false);
-      }
-    };
-    window.addEventListener("click", closeDropdowns);
-    return () => {
-      window.removeEventListener("click", closeDropdowns);
-    };
-  }, [activeItem]);
+    if (!toggle) {
+      const closeDropdowns = (event) => {
+        if (!event.target.closest("#DropDown")) {
+          setActiveItem(false);
+        }
+      };
+      window.addEventListener("click", closeDropdowns);
+      return () => {
+        window.removeEventListener("click", closeDropdowns);
+      };
+    }
+  }, [activeItem, toggle]);
+
+  useEffect(() => {
+    setActiveItem(false);
+  }, [toggle]);
 
   return (
     <li
@@ -33,7 +39,7 @@ const Drop = ({ bar, toggle }) => {
         {bar.icon}
         <p className={!toggle ? "hidden" : "flex"}>{bar.name}</p>
       </a>
-   
+
       {bar.children && (
         <ul
           tabIndex={0}
@@ -58,7 +64,6 @@ const Drop = ({ bar, toggle }) => {
               return null;
             }
           })}
-          
         </ul>
       )}
     </li>
