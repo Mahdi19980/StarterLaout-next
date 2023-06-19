@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Sidebar from "./sideBar/sideBar";
+import Sidebar from "./sideBar";
 import React from "react";
 import Drop from "./dropDownSide";
 
@@ -27,7 +27,7 @@ const SideBar = ({ checked, setCheck }) => {
   return (
     <ul
       dir="rtl"
-      className="  menu menu-lg p-4 pl-1 h-full plas shadow-md text-base-content  transition duration-500 ease-in-out"
+      className=" z-10 menu menu-lg p-4 pl-1 h-full plas shadow-md text-base-content gap-3  transition duration-500 ease-in-out"
     >
       {/* Sidebar content here */}
 

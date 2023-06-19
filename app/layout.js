@@ -1,15 +1,15 @@
-import Providers from "./components/Themeprovider";
-import Themechanger from "./components/Themechanger";
-import Navbar from "./components/navbar";
-import SideBar from "./components/drawer";
+import Providers from "./components/mode/ThemeProvider";
+import Themechanger from "./components/mode/ThemeChanger";
+import Navbar from "./components/navbar/navbar";
+import SideBar from "./components/sideBar/drawer";
 
 // import { Metadata } from "next";
 import "./globals.css";
 import "./components/sideBar/sideBar.css";
 
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 import LayoutProvider from "./layoutPage";
 
@@ -24,7 +24,6 @@ export default function RootLayout({ children, ...appProps }) {
       <body>
         <Providers>
           <div className="overflow-x-hidden ">
-            <Themechanger />
             <LayoutProvider>{children}</LayoutProvider>
           </div>
         </Providers>
