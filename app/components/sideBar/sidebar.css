@@ -2,9 +2,14 @@
 
 @media (min-width: 1024px) {
 
-    .main {
+    .main.active {
 
         width: 95vw !important;
+        transition: 0.5s;
+    }
+    .main.inactive {
+
+        width: 79vw !important;
         transition: 0.5s;
     }
 

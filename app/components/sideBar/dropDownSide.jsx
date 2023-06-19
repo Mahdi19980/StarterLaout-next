@@ -1,4 +1,14 @@
 "use client";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMagnifyingGlass,
+  faCircleStop,
+  faPlay,
+  faChevronLeft,
+  faAngleLeft,
+  faAngleDown,
+} from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import { BsNodePlusFill } from "react-icons/bs";
 
@@ -22,9 +32,13 @@ const Drop = ({ bar, toggle }) => {
         className={!toggle && "items-end pl-2 relative "}
         key={bar.id}
       >
-        <a className=" text-start text-base  li-item px-3 font-medium">
+        <a className=" text-start text-base  li-item px-3 font-semibold">
           {bar.icon}
           <p className={!toggle ? "hidden" : "flex"}>{bar.name}</p>
+          <FontAwesomeIcon
+            icon={!activeItem ? faAngleLeft : faAngleDown}
+            size="2xs"
+          />
         </a>
 
         {bar.children && (
@@ -41,8 +55,11 @@ const Drop = ({ bar, toggle }) => {
               if (activeItem === true) {
                 return (
                   <li key={item.id} className="" style={{ top: "10px" }}>
-                    <a className="font-medium text-start m-1 text-base" href="">
-                      {item.icon}
+                    <a
+                      className="font-normal text-start m-1 text-base pr-4"
+                      href=""
+                    >
+                      <FontAwesomeIcon icon={faPlay} rotation={180} size="xs" />
                       <p>{item.name}</p>
                     </a>
                   </li>

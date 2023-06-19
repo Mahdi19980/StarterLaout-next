@@ -6,6 +6,18 @@
   transition: background-color 0.5s ease-in-out; 
  } */
 
+
+::-webkit-scrollBar{
+width:4px ;
+background-color: #F5F5F5;
+overflow-y: scroll;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #38cab4ee;
+  border-radius: 20px;
+}
+
 [data-theme="night"]{
 
   .daisy{

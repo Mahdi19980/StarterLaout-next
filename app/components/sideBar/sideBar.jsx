@@ -1,30 +1,62 @@
-import { FaVuejs } from "react-icons/fa";
-import { CiDatabase, CiBullhorn } from "react-icons/ci";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faMagnifyingGlass,
+  faHouse,
+  faReact,
+  faTableLayout,
+  faCalendarDays,
+  faShop,
+  faCloud,
+} from "@fortawesome/free-solid-svg-icons";
 const Sidebar = [
   {
     id: 1,
     name: "Vue.js",
-    icon: <FaVuejs size={"1.5rem"} />,
+    icon: <FontAwesomeIcon icon={faHouse} size="lg" />,
     children: [
       {
         id: 1,
         name: "ali",
-        icon: <CiBullhorn size={"1.5rem"} />,
+        icon: 1,
       },
-      { id: 2, name: "hosein", icon: <CiDatabase size={"1.5rem"} /> },
+      { id: 2, name: "hosein" },
     ],
   },
   {
     id: 2,
-    name: "Vue.js",
-    icon: <FaVuejs size={"1.5rem"} />,
+    name: "React.js",
+    icon: <FontAwesomeIcon icon={faShop} size="lg" />,
     children: [
       {
         id: 1,
         name: "ali",
-        icon: <CiBullhorn size={"1.5rem"} />,
       },
-      { id: 2, name: "hosein", icon: <CiDatabase size={"1.5rem"} /> },
+      { id: 2, name: "hosein" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Laravel",
+    icon: <FontAwesomeIcon icon={faCloud} size="lg" />,
+    children: [
+      {
+        id: 1,
+        name: "ali",
+      },
+      { id: 2, name: "hosein" },
+    ],
+  },
+  {
+    id: 4,
+    name: "flutter.js",
+    icon: <FontAwesomeIcon icon={faCalendarDays} size="lg" />,
+    children: [
+      {
+        id: 1,
+        name: "ali",
+      },
+      { id: 2, name: "hosein" },
     ],
   },
 ];

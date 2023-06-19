@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
-import Navbar from "./components/navbar";
-import SideBar from "./components/drawer";
+import Navbar from "./components/navbar/navbar";
+import SideBar from "./components/sideBar/drawer";
 import { useState } from "react";
 
 const LayoutProvider = ({ children }) => {
