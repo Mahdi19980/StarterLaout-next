@@ -81,14 +81,21 @@ const Drop = ({ bar, toggle }) => {
           </label>
           <ul
             tabIndex={0}
-            className="dropdown-content menu p-2 shadow-lg shadow-cyan-500/20 bg-base-100 rounded-box w-52"
+            className="dropdown-content menu pb-5 pt-0 shadow-lg shadow-cyan-500/20 bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Item 2</a>
-            </li>
+            {bar.children.map((item, index) => {
+              return (
+                <li key={item.id} className="" style={{ top: "10px" }}>
+                  <a
+                    className="font-normal text-start m-1 text-base pr-4"
+                    href=""
+                  >
+                    <FontAwesomeIcon icon={faPlay} rotation={180} size="xs" />
+                    <p>{item.name}</p>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </li>
